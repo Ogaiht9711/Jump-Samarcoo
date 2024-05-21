@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Thiago">
+    <meta name="description" content="Padronização de Nota Jump Samarco"> 
+    <title>Nota Jump</title>
+    <link rel="shortcut icon" type="imagex/png" href="samarco_icon.png">
+    <link rel="stylesheet" href="estilo.css">
+    <script src="jquery.js"></script>
+    <script src="jquery.mask.js"></script>
+    <script src="validation.js"></script>
+</head>
+<body>
+    <div class="principal">
+        <header class="principal">
+            <nav>
+                <ul>
+                    <li><a href="ajuda.html">Ajuda e Contato</a></li>
+                    <img src="samarco_icon.png" alt="icone_samarco">
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="texto1">
+                <h1>NOTA JUMP</h1>
+            </div>
+            <div class="formulario">
+                <form action="conection.php" method="post" id="form-1">
+                    <div class="dados">
+                        <h2>Dados Pessoais</h2>
+                        <div class="personal">
+                            <div class="divleft">
+                                <label for="name"> *NOME COMPLETO: <input type="text" name="name" id="name" maxlength="40" minlength="6" required></label>
+                                <label for="ramal"> *RAMAL: <input type="tel" name="ramal" id="ramal" value="3559-" required minlength="9"></label>
+                                <label for="emailinput" id="email">*EMAIL: <input type="email" name="email" id="emailinput" maxlength="40" minlength="8" required></label>
+                            </div>
+                            <div class="divright">
+                                <label for="user-ti"> *SEU USUÁRIO DE TI: <input type="text" name="user-ti" id="user-ti" maxlength="40" minlength="8" required></label>
+                                <label for="chapa"> *CHAPA: <input type="text" name="chapa" id="chapa" minlength="7" required></label>
+                                <label for="workcenter" id="workcenter-label"> *CENTRO DE TRABALHO:
+                                <select name="workcenter" id="workcenter" required>
+                                    <option value=""></option>
+                                    <option value="SOPR001"> Operação - Mina</option>
+                                    <option value="SOPR002"> Operação-Longa Distância Concentrador 2</option>
+                                    <option value="SOPR003"> Operação-Longa Distância Concentrador 1</option>
+                                    <option value="SOPR004"> Operação-Concentrador 2</option>
+                                    <option value="SOPR005"> Operação-Concentrador 1</option>
+                                    <option value="SOPR006"> Operação Mineroduto</option>
+                                    <option value="SPOR006"> Operação-Longa Distância Concentrador 3</option>
+                                    <option value="SPOR007"> Operação-Concentrador 3</option>
+                                    <option value="SELE007"> Manutenção Elétrica EBIV</option>
+                                    <option value="SELE201"> Manutenção Elétrica Usina 3</option>
+                                    <option value="SELE211"> Manutenção Elétrica Filtragem</option>
+                                    <option value="SENG001"> Engenharia da Manutenção</option>
+                                    <option value="SINS001"> Instrument. Concentração</option>
+                                    <option value="SINS002"> Instr. Mina</option>
+                                    <option value="SINS003"> Instrument. EBI/EBIII</option>
+                                    <option value="SINS005"> Instr. Brit/CVLD/AL9/Fazen.</option>
+                                    <option value="SINS006"> Instr. Utilidades/Sist. Água/Sist. Ar</option></option></option>
+                                    <option value="SINS007"> Manutenção Instrumentação EBIV</option></option>
+                                    <option value="SINS008"> Instrument. Geotécnica</option></option>
+                                    <option value="SMEC004"> Manutenção Sistema de Água</option></option>
+                                    <option value="SMEC009"> Manutenção EBIV</option></option>
+                                    <option value="SMEC012"> Manutenção Sistema de Ar</option></option>
+                                    <option value="SMEC013"> Manutenção Integrida Mineroduto</option></option>
+                                    <option value="SMEC015"> MANUTENÇÃO MECÂNICA FROTA DE MINERAÇÃO</option></option>
+                                    <option value="SMEC015"> MANUTENÇÃO MECÂNICA FROTA DE MINERAÇÃO</option></option>
+                                    <option value="SMEC018"> Manutenção Pontes Rolantes e Talhas</option></option>
+                                    <option value="SMEC101"> Manutenção Mecânica Usina 2</option>
+                                    <option value="SMEC201"> Manutenção Mecânica Usina 3</option>
+                                    <option value="SMEC211"> Manutenção Mecânica Filtragem</option>
+                                    <option value="STUR001"> Turno de Manutenção Letra A</option>
+                                    <option value="STUR001"> Turno de Manutenção</option>
+                                    <option value="STUR002"> Turno de Manutenção Letra B</option>
+                                    <option value="STUR003"> Turno de Manutenção Letra C</option>
+                                    <option value="STUR004"> Turno de Manutenção Letra D</option>
+                                    <option value="STUR005"> Turno de Manutenção Britagem 03 e TCLD</option>
+                                    <option value="STUR201"> Turno Manutenção Usina 3</option>
+                                    <option value="Indefinido">Outro</option>
+                                </select>
+                            </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="jump"> 
+                        <h2>Descrição Jump</h2>
+                        <div class="divleft-2">
+                            <label for="equip"> *EQUIPAMENTO: <input type="text" name="equip" id="equip" placeholder="G000-AAA-000" maxlength="12" minlength="5" required></label>
+                            <label for="protectionoff"> *PROTEÇÃO INIBIDA: <input type="text" name="protectionoff" id="protectionoff" maxlength="40" required></label>
+                            <label for="clp"> CONTROLADOR: <input type="text" name="clp" id="clp" placeholder="CLP-00" maxlength="7" minlength="2"></label>
+                        </div>
+                        <div class="divright-2">
+                            <label for="date_i"> *DATA DE REALIZAÇÃO: <input type="text" name="date_i" id="date_i" minlength="8" required></label>
+                            <label for="date_f"> DATA DE RETIRADA: <input type="text" name="date_f" id="date_f" minlength="8"></label>
+                            <label for="supervisorio"> SUPERVISÓRIO:
+                                <select name="supervisorio" id="supervisorio">
+                                    <option value=""></option>
+                                    <option value="DeltaV"> Delta V2</option>
+                                    <option value="DeltaV"> Delta V3</option>
+                                    <option value="Elipse"> Elipse</option>
+                                    <option value="IAS"> IAS</option>
+                                </select>
+                            </label>
+                        </div>
+                        <label for="reason" id="motivo"> MOTIVO E DESCRIÇÃO: <textarea name="reason" id="reason" cols="30" rows="10" maxlength="200" placeholder="Detalhe mais sobre a necessidade do Jump ou algum detalhe pertinente"></textarea></label>
+                        </div>
+                        <button type="submit" form="form-1" value="Enviar" onclick="confirmar();">ENVIAR</button>  
+                    </div>   
+                </form>
+            </div>
+        </main>
+        <footer>
+            <h3 id="footer-1">Copyright &copy; Samarco. Todos os direitos reservados</h3> <h3 id="footer-2">Thiago Dias Oliveira</h3>
+        </footer>
+    </div>
+
+</body>
+</html>
